@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CMCS</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		
+
+		<style>
+			header{
+				background-color: SlateGrey;
+        color: white;
+			}
+			.brand{
+				color:white;
+				font-family: "Times New Roman", Times, serif;	
+			}
+			h3{
+				font-family: "Times New Roman", Times, serif;
+				color:mediumseagreen;
+			}
+			h4{
+				font-style: italic;
+				font-weight: normal;
+				color:dodgerblue;
+			}
+			.faculty {outline-style: outset;}
+			
+			#myImg {
+			  border-radius: 5px;
+			  cursor: pointer;
+			  transition: 0.3s;
+			}
+
+			#myImg:hover {opacity: 0.7;}
+
+			/* The Modal (background) */
+			.modal {
+			  display: none; /* Hidden by default */
+			  position: fixed; /* Stay in place */
+			  z-index: 1; /* Sit on top */
+			  padding-top: 100px; /* Location of the box */
+			  left: 0;
+			  top: 0;
+			  width: 100%; /* Full width */
+			  height: 100%; /* Full height */
+			  overflow: auto; /* Enable scroll if needed */
+			  background-color: rgb(0,0,0); /* Fallback color */
+			  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modal-content {
+			  margin: auto;
+			  display: block;
+			  width: 80%;
+			  max-width: 300px;
+			}
+
+			/* Caption of Modal Image */
+			.caption {
+			  margin: auto;
+			  display: block;
+			  width: 80%;
+			  max-width: 700px;
+			  text-align: center;
+			  color: #ccc;
+			  padding: 10px 0;
+			  height: 150px;
+			}
+
+			/* Add Animation */
+			.modal-content, #caption {  
+			  -webkit-animation-name: zoom;
+			  -webkit-animation-duration: 0.6s;
+			  animation-name: zoom;
+			  animation-duration: 0.6s;
+			}
+
+			@-webkit-keyframes zoom {
+			  from {-webkit-transform:scale(0)} 
+			  to {-webkit-transform:scale(1)}
+			}
+
+			@keyframes zoom {
+			  from {transform:scale(0)} 
+			  to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+			.close {
+			  position: absolute;
+			  top: 15px;
+			  right: 35px;
+			  color: #f1f1f1;
+			  font-size: 40px;
+			  font-weight: bold;
+			  transition: 0.3s;
+			}
+
+			.close:hover,
+			.close:focus {
+			  color: #bbb;
+			  text-decoration: none;
+			  cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+			  .modal-content {
+				width: 10%;
+			  }
+			}
+            .show{
+             background: linear-gradient(to bottom, white, #66CDAA);
+        color: white;
+        }
+		</style>
+	</head>
+	<body>
+		<header>
+			<br/>
+            
+			<div class="row">
+				<div class="col-md-2 text-right">
+					<a href="index.php"><img src="logo.jpg"/></a>
+				</div>
+				<div class="col-md-10">
+					<h1 class="brand" >SCHOOL OF COMPUTER SCIENCE</h1>
+				</div>
+			</div>
+			<br/>
+		</header><br/><br/><br/>
+        <div class="show">
+        <div class="row text-center">
+				<img id="myImgskp" src="img/faculty/1.jpg" alt="snowskp" style="width:100%;max-width:300px">
+				<h3>Samit Kumar Pradhan</h3>
+				<h4>Head Of The Department</h4>
+			<!-- The Modal -->
+			<div id="myModalskp" class="modal">
+			  <span class="close">&times;</span>
+			  <img class="modal-content" id="img011">
+			  <div id="captionskp"></div>
+			</div>
+			</div>
+
+		<script>
+			// Get the modal
+			var modalskp = document.getElementById('myModalskp');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var imgskp = document.getElementById('myImgskp');
+			var modalImgskp = document.getElementById("img011");
+			var captionTextskp = document.getElementById("captionskp");
+			imgskp.onclick = function(){
+			  modalskp.style.display = "block";
+			  modalImgskp.src = this.src;
+			  captionTextskp.innerHTML = "<h3>Samit Kumar Pradhan</h3><h4>Associate Professor</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modalskp.style.display = "none";
+			}
+		</script>
+		<h2 class="text-center">Faculty Directory</h2><br/><br/>
+		
+		<div class="row text-center">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<img id="myImg" src="img/faculty/2.jpg" alt="snow" style="width:100%;max-width:300px"/>
+				<h3>Dr J K Meher</h3>
+				<h4>Professor</h4>
+				<div id="myModal" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img01">
+				  <div id="caption" class="caption"></div>
+				</div>
+
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<img id="myImg2" src="img/faculty/3.jpg" alt="snow2" style="width:100%;max-width:300px"/>
+				<h3>Kapil Dora</h3>
+				<h4>Associate Professor</h4>
+				<div id="myModal2" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img02">
+				  <div id="caption2" class="caption"></div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3 text-center">
+				<img id="myImg3" src="img/faculty/4.jpg" alt="snow3" style="width:100%;max-width:200px"/>
+				<h3>Sagarika  Mishra</h3>
+				<h4>Associate Professor</h4>
+				<div id="myModal3" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img03">
+				  <div id="caption3" class="caption"></div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row text-center">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<img id="myImg4" src="img/faculty/5.jpg" alt="snow" style="width:100%;max-width:300px"/>
+				<h3>Sweta Dhar</h3>
+				<h4>Associate Professor</h4>
+				<div id="myModal4" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img04">
+				  <div id="caption4" class="caption"></div>
+				</div>
+
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<img id="myImg5" src="img/faculty/6.jpg" alt="snow2" style="width:100%;max-width:300px"/>
+				<h3>Moumita Gosh</h3>
+				<h4>Associate Professor</h4>
+				<div id="myModal5" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img05">
+				  <div id="caption5" class="caption"></div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			<!--div class="col-md-3 text-center">
+				<img id="myImg6" src="img/faculty/sagarika mam.jpg" alt="snow3" style="width:100%;max-width:200px"/>
+				<h3>Namrata Mishra</h3>
+				<h4>Associate Professor</h4>
+				<div id="myModal6" class="modal">
+				  <span class="close">&times;</span>
+				  <img class="modal-content" id="img06">
+				  <div id="caption6" class="caption"></div>
+				</div>
+
+			</div-->
+			
+			
+		</div>
+		<script>
+			// Get the modal 1
+			var modal = document.getElementById('myModal');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('myImg');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			  modal.style.display = "block";
+			  modalImg.src = this.src;
+			  captionText.innerHTML ="<h3>Dr J K Meher</h3><h4>Professor</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";
+			}
+
+			// Get the <span> element that closes the modal
+			var span1 = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span1.onclick = function() { 
+			  modal.style.display = "none";
+			}
+		
+			// Get the modal 2
+			var modal1 = document.getElementById('myModal2');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img1 = document.getElementById('myImg2');
+			var modalImg1 = document.getElementById("img02");
+			var captionText2 = document.getElementById("caption2");
+			img1.onclick = function(){
+			  modal1.style.display = "block";
+			  modalImg1.src = this.src;
+			  captionText2.innerHTML = "<h3>Kapil Dora</h3><h4>Guest Faculty</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[1];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal1.style.display = "none";
+			}
+			
+			// Get the modal 3
+			var modal3 = document.getElementById('myModal3');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img3 = document.getElementById('myImg3');
+			var modalImg3 = document.getElementById("img03");
+			var captionText3 = document.getElementById("caption3");
+			img3.onclick = function(){
+			  modal3.style.display = "block";
+			  modalImg3.src = this.src;
+			  captionText3.innerHTML = "<h3>Sagarika Bijayalaxmi Mishra</h3><h4>Guest Faculty</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[2];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal3.style.display = "none";
+			}
+			
+			// Get the modal 4
+			var modal4 = document.getElementById('myModal4');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img4 = document.getElementById('myImg4');
+			var modalImg4 = document.getElementById("img04");
+			var captionText4 = document.getElementById("caption4");
+			img4.onclick = function(){
+			  modal4.style.display = "block";
+			  modalImg4.src = this.src;
+			  captionText4.innerHTML = "<h3>Sweta Dhar</h3><h4>Lab Instructor</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[3];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal4.style.display = "none";
+			}
+			
+			// Get the modal 5
+			var modal5 = document.getElementById('myModal5');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img5 = document.getElementById('myImg5');
+			var modalImg5 = document.getElementById("img05");
+			var captionText5 = document.getElementById("caption5");
+			img5.onclick = function(){
+			  modal5.style.display = "block";
+			  modalImg5.src = this.src;
+			  captionText5.innerHTML = "<h3>Moumita Gosh</h3><h4>Guest Faculty</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[4];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal5.style.display = "none";
+			}
+			
+			// Get the modal 6
+			var modal6 = document.getElementById('myModal6');
+	
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img6 = document.getElementById('myImg6');
+			var modalImg6 = document.getElementById("img06");
+			var captionText6 = document.getElementById("caption6");
+			img6.onclick = function(){
+			  modal6.style.display = "block";
+			  modalImg6.src = this.src;
+			  captionText6.innerHTML = "<h3>Namrata Mishra</h3><h4>Associate Professor</h4><h5>Joined in February 2012</h5><h5>30 October 1980</h5><h5>abc@gmail</h5><h5>Except In --TOC,OS,SP</h5>";//this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[5];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal6.style.display = "none";
+			}
+		</script>
+        </div>div>
+	</body>
+</html>
+	
